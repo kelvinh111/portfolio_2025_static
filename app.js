@@ -54,11 +54,18 @@
   ParticleEffects.isTouch = "ontouchstart" in document.documentElement;
 
   ParticleEffects.getTaggedElem = function (element, tagName) {
+    if (!element.dataset.icon) {
+      return false
+    }
+
     while (element && element.nodeType !== 9) {
-      if (element.nodeName && element.nodeName.toLowerCase() === tagName)
+      if (element.nodeName && element.nodeName.toLowerCase() === tagName) {
+        // console.log(element.nodeName, element.dataset.icon)
         return element;
+      }
       element = element.parentNode;
     }
+
     return false;
   };
 
