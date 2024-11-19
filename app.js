@@ -1,3 +1,17 @@
+(function () {
+  const cursor = new MouseFollower({
+    activeState: 'active'
+  });
+
+  document.addEventListener('mousedown', () => {
+    cursor.setText("It's not easy though");
+  })
+
+  document.addEventListener('mouseup', () => {
+    cursor.removeText();
+  })
+})();
+
 // Polyfill for requestAnimationFrame and cancelAnimationFrame
 !(function (global) {
   "use strict";
@@ -149,8 +163,8 @@
 
     sparkle() {
       this.endIndex = Math.min(this.endIndex + 1, this.charsLen);
-      let hue = (10 * this.hueIndex) % 360;
-      let color = this.isHovered ? "hsl(" + hue + ", 100%, 50%)" : "white";
+      let hue = (10 * this.hueIndex) % 240 + 120;
+      let color = this.isHovered ? "hsl(" + hue + ", 70%, 80%)" : "white";
       this.colors.unshift(color);
 
       for (let i = this.startIndex; i < this.endIndex; i++) {
@@ -277,7 +291,7 @@
       this.velocityR *= 0.95;
 
       let totalDistance = Math.sqrt(this.x * this.x + this.y * this.y);
-      this.scale = 3 * (totalDistance / interactionRadius) + 1;
+      this.scale = 2 * (totalDistance / interactionRadius) + 1;
 
       let isCurrentlySettled =
         Math.abs(this.x) < 0.03 &&
