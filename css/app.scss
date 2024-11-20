@@ -37,6 +37,11 @@
     content: "\e903";
 }
 
+html,
+body {
+    overflow: hidden;
+}
+
 body,
 h1,
 h2,
@@ -58,7 +63,7 @@ body {
     animation: gradient 15s ease infinite;
     height: 100vh;
     color: #fff;
-    font: normal 32px/48px "Playfair Display", serif;
+    font: normal 30px/45px "Playfair Display", serif;
 }
 
 @keyframes gradient {
@@ -74,9 +79,9 @@ body {
 }
 
 #content {
-    width: 720px;
+    width: 650px;
     margin: 0 auto;
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 a {
@@ -85,9 +90,10 @@ a {
 }
 
 p {
-    margin: 10px 0;
+    margin: 8px 0;
+    cursor: default;
     &.space {
-        margin-bottom: 65px;
+        margin-bottom: 60px;
     }
 }
 
@@ -106,16 +112,41 @@ p {
     margin-bottom: -20px;
 }
 
-.mf-cursor.active {
+.mf-cursor {
     &:before {
-        transform: scale(3.8);
-        background-color: rgba(white, 0);
-        border: 1px solid white;
+        color: yellow;
     }
-}
+    &.-text:not(.active):before {
+        width: 10px;
+        height: 10px;
+        top: -5px;
+        left: -5px;
+        transform: scale(1);
+    }
+    &.-text:not(.active) {
+        .mf-cursor-text {
+            color: yellow;
+            font-family: "Lacquer", system-ui;
+            font-size: 20px;
+            line-height: 20px;
+            white-space: nowrap;
+            transform: translateY(30px);
+        }
+    }
 
-.mf-cursor-text {
-    font-size: 30px;
-    line-height: 40px;
-    font-weight: bold;
+    &.active {
+        &:before {
+            transform: scale(3.8);
+            background-color: rgba(white, 0);
+            border: 1px solid yellow;
+        }
+    }
+
+    .mf-cursor-text {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: bold;
+        font-family: "Lacquer", system-ui;
+        color: yellow;
+    }
 }

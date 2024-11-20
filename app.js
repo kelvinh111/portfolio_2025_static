@@ -3,6 +3,8 @@
     activeState: 'active'
   });
 
+  cursor.setText('Click & Drag')
+
   document.addEventListener('mousedown', () => {
     cursor.setText("It's not easy though");
   })
@@ -191,7 +193,7 @@
   // Particle system for characters using ES6 Classes
   let cursorX, cursorY;
   const TAU = 2 * Math.PI;
-  const interactionRadius = 285;
+  const interactionRadius = 250;
   const transformProperty = getVendorPrefixedProperty("transform");
   let particles = (ParticleEffects.charParticles = []);
   let particleIndex = 0;
@@ -274,7 +276,7 @@
           rotationForce += TAU;
         }
 
-        interactionStrength *= 4 * interactionStrength;
+        interactionStrength *= 3.5 * interactionStrength;
         this.velocityX += Math.cos(angleToCursor) * -interactionStrength;
         this.velocityY += Math.sin(angleToCursor) * -interactionStrength;
       }
