@@ -90,7 +90,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html --open && parcel watch index.html",
+    "start": "parcel index.html --open --host 192.168.0.13 && parcel watch index.html",
     "build": "parcel build index.html"
   },
   "author": "",
