@@ -116,14 +116,14 @@ p {
     &:before {
         color: yellow;
     }
-    &.-text:not(.active):before {
+    &.-text:not(.-active):before {
         width: 10px;
         height: 10px;
         top: -5px;
         left: -5px;
         transform: scale(1);
     }
-    &.-text:not(.active) {
+    &.-text:not(.-active) {
         .mf-cursor-text {
             color: yellow;
             font-family: "Lacquer", system-ui;
@@ -134,9 +134,9 @@ p {
         }
     }
 
-    &.active {
+    &.-active {
         &:before {
-            transform: scale(3.8);
+            transform: scale(3.8) !important;
             background-color: rgba(white, 0);
             border: 1px solid yellow;
         }
