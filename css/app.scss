@@ -1,8 +1,8 @@
 @font-face {
-    font-family: "kelvin-pofo-2025";
-    src: url("../fonts/kelvin-pofo-2025.ttf?4ee9m3") format("truetype"),
-        url("../fonts/kelvin-pofo-2025.woff?4ee9m3") format("woff"),
-        url("../fonts/kelvin-pofo-2025.svg?4ee9m3#kelvin-pofo-2025")
+    font-family: "kelvin-portfolio-2025";
+    src: url("../fonts/kelvin-portfolio-2025.ttf?4ee9m3") format("truetype"),
+        url("../fonts/kelvin-portfolio-2025.woff?4ee9m3") format("woff"),
+        url("../fonts/kelvin-portfolio-2025.svg?4ee9m3#kelvin-portfolio-2025")
             format("svg");
     font-weight: normal;
     font-style: normal;
@@ -11,7 +11,7 @@
 
 .icon {
     /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: "kelvin-pofo-2025" !important;
+    font-family: "kelvin-portfolio-2025" !important;
     speak: never;
     font-style: normal;
     font-weight: normal;

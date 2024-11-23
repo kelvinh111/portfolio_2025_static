@@ -6,6 +6,11 @@
   },
   "name": "portfolio_2025_static",
   "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html --open --host 192.168.0.13 && parcel watch index.html",
+    "build": "parcel build index.html"
+  },
   "dependencies": {
     "ansi-styles": "^6.2.1",
     "argparse": "^2.0.1",
@@ -87,11 +92,6 @@
     "update-browserslist-db": "^1.1.1",
     "utility-types": "^3.11.0",
     "weak-lru-cache": "^1.2.2"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html --open --host 192.168.0.13 && parcel watch index.html",
-    "build": "parcel build index.html"
   },
   "author": "",
   "license": "ISC",
