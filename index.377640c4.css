@@ -1,0 +1,132 @@
+@font-face {
+  font-family: kelvin-pofo-2025;
+  src: url("kelvin-pofo-2025.72f5390c.ttf") format("truetype"), url("kelvin-pofo-2025.0c3c23be.woff") format("woff"), url("kelvin-pofo-2025.180c7529.svg#kelvin-pofo-2025") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  speak: never;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  font-family: kelvin-pofo-2025 !important;
+}
+
+[data-icon="linkedin"]:before {
+  content: "";
+}
+
+[data-icon="email"]:before {
+  content: "";
+}
+
+[data-icon="codepen"]:before {
+  content: "";
+}
+
+[data-icon="history"]:before {
+  content: "";
+}
+
+body, h1, h2, h3, h4, h5, h6, ul, ol, li, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  background: #000;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: .5em;
+  font-family: futura-pt, Futura, sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+body, h1, h2 {
+  font-size: 26px;
+}
+
+a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#intro img {
+  float: right;
+  border-radius: 10px;
+  width: 140px;
+  margin: 0 0 10px 10px;
+}
+
+h1, h2 {
+  font-weight: 700;
+}
+
+h2 {
+  margin-top: 1em;
+  font-style: italic;
+}
+
+h1, h2, p, li {
+  padding: .1em 0;
+}
+
+li {
+  font-weight: 700;
+  list-style: none;
+}
+
+.word, .char {
+  display: inline-block;
+}
+
+.char {
+  position: relative;
+}
+
+.credo {
+  font-style: italic;
+}
+
+.copy {
+  font-size: 20px;
+}
+
+#contact p {
+  margin-bottom: .8em;
+}
+
+@media screen and (width >= 600px) {
+  body {
+    padding: 1em;
+  }
+
+  body, h1, h2 {
+    font-size: 32px;
+  }
+
+  #intro img {
+    width: 200px;
+  }
+
+  .copy {
+    font-size: 28px;
+  }
+}
+
+#intro {
+  font-optical-sizing: auto;
+  font-family: Playfair Display, serif;
+  font-style: normal;
+  font-weight: 400;
+}
+/*# sourceMappingURL=index.377640c4.css.map */
