@@ -38,8 +38,8 @@ function isMobileDevice() {
         }
 
         updateCursorPosition({
-          clientX: 500,
-          clientY: 340
+            clientX: 500,
+            clientY: 340,
         })
 
         document.addEventListener(
@@ -132,7 +132,6 @@ function isMobileDevice() {
                 element.nodeName &&
                 element.nodeName.toLowerCase() === tagName
             ) {
-                // console.log(element.nodeName, element.dataset.icon)
                 return element
             }
             element = element.parentNode
@@ -182,7 +181,6 @@ function isMobileDevice() {
             fragment.appendChild(document.createTextNode(" "))
         }
         element.appendChild(fragment)
-        // return ParticleEffects.isTouch ? wordSpans : charSpans;
         return charSpans
     }
 
@@ -394,19 +392,6 @@ function isMobileDevice() {
         activateCursor(event, event)
     }
 
-    // function onTouchStart(event) {
-    //   for (let i = 0, len = event.changedTouches.length; i < len; i++) {
-    //     let touch = event.changedTouches[i];
-    //     if (primaryTouchId) {
-    //       if (!secondaryTouchId) {
-    //         activateCursor(touch, event);
-    //       }
-    //     } else {
-    //       primaryTouchId = touch.identifier;
-    //       global.addEventListener("touchend", onPrimaryTouchEnd, false);
-    //     }
-    //   }
-    // }
     function onTouchStart(event) {
         if (!ParticleEffects.isCursorActive) {
             let touch = event.changedTouches[0]
@@ -417,28 +402,7 @@ function isMobileDevice() {
         }
     }
 
-    // function activateCursor(event, originalEvent) {
-    //   if (!ParticleEffects.getTaggedElem(event.target, "span")) {
-    //     ParticleEffects.isCursorActive = true;
-    //     ParticleEffects.areAllCharParticlesSettled = false;
-    //     cursorX = event.pageX;
-    //     cursorY = event.pageY;
-    //     if (event.identifier) {
-    //       secondaryTouchId = event.identifier;
-    //     }
-    //     originalEvent.preventDefault();
-    //     if (ParticleEffects.isTouch) {
-    //       global.addEventListener("touchmove", onTouchMove, false);
-    //       global.addEventListener("touchend", onSecondaryTouchEnd, false);
-    //     } else {
-    //       global.addEventListener("mousemove", onMouseMove, false);
-    //       global.addEventListener("mouseup", onMouseUp, false);
-    //     }
-    //   }
-    // }
-
     function activateCursor(event, originalEvent) {
-        //   if (!ParticleEffects.getTaggedElem(event.target, "span")) {
         ParticleEffects.isCursorActive = true
         ParticleEffects.areAllCharParticlesSettled = false
         cursorX = event.pageX
@@ -458,14 +422,6 @@ function isMobileDevice() {
         updateCursorPosition(event)
     }
 
-    // function onTouchMove(event) {
-    //   for (let i = 0, len = event.changedTouches.length; i < len; i++) {
-    //     let touch = event.changedTouches[i];
-    //     if (secondaryTouchId && touch.identifier === secondaryTouchId) {
-    //       updateCursorPosition(touch);
-    //     }
-    //   }
-    // }
     function onTouchMove(event) {
         if (ParticleEffects.isCursorActive) {
             for (let i = 0; i < event.changedTouches.length; i++) {
@@ -499,37 +455,6 @@ function isMobileDevice() {
         global.removeEventListener("mouseup", onMouseUp, false)
     }
 
-    function onPrimaryTouchEnd(event) {
-        for (let i = 0, len = event.changedTouches.length; i < len; i++) {
-            let touch = event.changedTouches[i]
-            if (touch.identifier === primaryTouchId) {
-                primaryTouchId = null
-                deactivateCursor()
-                global.removeEventListener("touchend", onPrimaryTouchEnd, false)
-            }
-        }
-    }
-
-    function onSecondaryTouchEnd(event) {
-        for (let i = 0, len = event.changedTouches.length; i < len; i++) {
-            let touch = event.changedTouches[i]
-            if (touch.identifier === secondaryTouchId) {
-                deactivateCursor()
-            }
-        }
-    }
-
-    // function deactivateCursor() {
-    //   ParticleEffects.isCursorActive = false;
-    //   secondaryTouchId = null;
-    //   if (ParticleEffects.isTouch) {
-    //     global.removeEventListener("touchmove", onTouchMove, false);
-    //     global.removeEventListener("touchend", onSecondaryTouchEnd, false);
-    //   } else {
-    //     global.removeEventListener("mousemove", onMouseMove, false);
-    //     global.removeEventListener("mouseup", onMouseUp, false);
-    //   }
-    // }
     function deactivateCursor() {
         ParticleEffects.isCursorActive = false
         if (ParticleEffects.isTouch) {
@@ -552,7 +477,7 @@ function isMobileDevice() {
         requestAnimationFrame(animate)
     }
 
-    let primaryTouchId, secondaryTouchId
+    let primaryTouchId
 
     ParticleEffects.addCharParticles = function (elements) {
         let particleArray = []
@@ -583,9 +508,6 @@ function isMobileDevice() {
         }
     }
 
-    // Initialization
-    setTimeout(ParticleEffects.initCharParticles, 20)
-
     // Initialization of particles and event listeners
     let isParticlesInitialized = false
 
@@ -611,9 +533,14 @@ function isMobileDevice() {
 
             isParticlesInitialized = true
         }
+
+        setTimeout(() => {
+            ParticleEffects.initCharParticles()
+        }, 1000)
     }
 
     global.addEventListener("DOMContentLoaded", initialize, false)
+
     if (!ParticleEffects.isTouch) {
         global.onload = initialize
     }

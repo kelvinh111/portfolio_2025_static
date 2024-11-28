@@ -67,7 +67,8 @@ body {
     animation: gradient 10s ease infinite;
     height: 100vh;
     color: #fff;
-    font: normal 30px/45px "Playfair Display", serif;
+    font: normal 30px/50px "M PLUS 1p", sans-serif;
+    letter-spacing: 1px;
 }
 
 @keyframes gradient {
@@ -83,9 +84,9 @@ body {
 }
 
 #content {
-    width: 650px;
+    width: 700px;
     margin: 0 auto;
-    padding: 40px 0;
+    padding: 50px 0;
 }
 
 a {
@@ -147,8 +148,8 @@ p {
     }
 
     .mf-cursor-text {
-        font-size: 30px;
-        line-height: 40px;
+        font-size: 28px;
+        line-height: 34px;
         font-weight: bold;
         font-family: "Lacquer", system-ui;
         color: yellow;
