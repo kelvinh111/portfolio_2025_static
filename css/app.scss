@@ -67,8 +67,7 @@ body {
     animation: gradient 10s ease infinite;
     height: 100vh;
     color: #fff;
-    font: normal 30px/50px "M PLUS 1p", sans-serif;
-    letter-spacing: 1px;
+    font: 600 40px/46px "Instrument Sans", sans-serif;
 }
 
 @keyframes gradient {
@@ -84,9 +83,8 @@ body {
 }
 
 #content {
-    width: 700px;
-    margin: 0 auto;
-    padding: 50px 0;
+    width: 1000px;
+    padding: 50px;
 }
 
 a {
@@ -112,9 +110,9 @@ p {
 }
 
 .line {
-    letter-spacing: -4px;
+    letter-spacing: 0px;
     opacity: 0.5;
-    margin-bottom: -20px;
+    margin-bottom: -10px;
 }
 
 .mf-cursor {
