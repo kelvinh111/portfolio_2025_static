@@ -46,7 +46,7 @@ function isMobileDevice() {
             "touchstart",
             (event) => {
                 cursor.addState("-active")
-                cursor.setText("It's not easy though")
+                cursor.setText("Thanks for Visiting")
                 updateCursorPosition(event.touches[0])
             },
             { passive: false }
