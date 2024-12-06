@@ -48,34 +48,48 @@ canvas {
 }
 
 body {
-  color: #fff;
-  background: linear-gradient(-45deg, #1a035e, #4158d0, #c850c0, #ffcc70) 0 0 / 250% 250%;
+  color: #00073c;
+  background: repeating-linear-gradient(#ff5579 0%, #ff61b0 33.333%, #6f57ff 66.666%, #ff5579 100%) 0 0 / 100% 300%;
   height: 100vh;
-  font: 600 40px / 46px Instrument Sans, sans-serif;
-  animation: 10s infinite gradient;
+  font: italic 400 53px / 57.5px DM Serif Display, sans-serif;
+  animation: 10s linear infinite gradient;
+}
+
+#bg {
+  z-index: -1;
+  background: url("static_bg.ce30239a.svg") center no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @keyframes gradient {
   0% {
-    background-position: 0%;
+    background-position: 0 0;
   }
 
-  50% {
-    background-position: 100%;
+  33.333% {
+    background-position: 0 33%;
+  }
+
+  66.666% {
+    background-position: 0 66%;
   }
 
   100% {
-    background-position: 0%;
+    background-position: 0 0;
   }
 }
 
 #content {
   width: 1000px;
-  padding: 50px;
+  padding: 30px;
 }
 
 a {
-  color: #fff;
+  color: #00073c;
   text-decoration: none;
 }
 
@@ -85,7 +99,7 @@ p {
 }
 
 p.space {
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .word, .char {
@@ -97,13 +111,17 @@ p.space {
 }
 
 .line {
-  letter-spacing: 0;
+  letter-spacing: -5px;
   opacity: .5;
-  margin-bottom: -10px;
+  margin-top: -10px;
+}
+
+.icon {
+  font-size: 40px;
 }
 
 .mf-cursor:before {
-  color: #ff0;
+  color: #2d5da9;
 }
 
 .mf-cursor.-text:not(.-active):before {
@@ -115,9 +133,9 @@ p.space {
 }
 
 .mf-cursor.-text:not(.-active) .mf-cursor-text {
-  color: #ff0;
+  color: #2d5da9;
   white-space: nowrap;
-  font-family: Lacquer, system-ui;
+  font-family: Edu AU VIC WA NT Hand, cursive;
   font-size: 20px;
   line-height: 20px;
   transform: translateY(30px);
@@ -125,15 +143,15 @@ p.space {
 
 .mf-cursor.-active:before {
   background-color: #fff0;
-  border: 1px solid #ff0;
+  border: 1px solid #2d5da9;
   transform: scale(3.8) !important;
 }
 
 .mf-cursor .mf-cursor-text {
-  color: #ff0;
-  font-family: Lacquer, system-ui;
+  color: #2d5da9;
+  font-family: Edu AU VIC WA NT Hand, cursive;
   font-size: 28px;
   font-weight: bold;
-  line-height: 34px;
+  line-height: 42px;
 }
 /*# sourceMappingURL=index.15986077.css.map */
