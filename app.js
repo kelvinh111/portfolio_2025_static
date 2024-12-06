@@ -18,7 +18,7 @@ function isMobileDevice() {
     if (!isMobileDevice()) {
         // Mouse events
         document.addEventListener("mousedown", () => {
-            cursor.setText("It's not easy though")
+            cursor.setText("Thanks for Visiting")
         })
 
         document.addEventListener("mouseup", () => {
@@ -221,7 +221,7 @@ function isMobileDevice() {
         sparkle() {
             this.endIndex = Math.min(this.endIndex + 1, this.charsLen)
             let hue = ((10 * this.hueIndex) % 240) + 120
-            let color = this.isHovered ? "hsl(" + hue + ", 70%, 80%)" : "white"
+            let color = this.isHovered ? "hsl(" + hue + ", 70%, 80%)" : "#00073c"
             this.colors.unshift(color)
 
             for (let i = this.startIndex; i < this.endIndex; i++) {
