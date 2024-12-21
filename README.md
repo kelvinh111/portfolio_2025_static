@@ -1,6 +1,6 @@
 # The embedded page for my portfolio 2025
 
-A standalone single-page site embedded as an `<iframe>` within [portfolio_2025](https://kelvinhung.uk).
+A standalone single-page site embedded as an `<iframe>` within [my portfolio 2025](https://kelvinhung.uk).
 
 ## Requirements
 - Node.js (v16+ recommended)
