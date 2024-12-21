@@ -1,4 +1,3 @@
-// Define a function to detect mobile devices
 function isMobileDevice() {
     return (
         /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -16,7 +15,6 @@ function isMobileDevice() {
     cursor.setText("Drag me")
 
     if (!isMobileDevice()) {
-        // Mouse events
         document.addEventListener("mousedown", () => {
             cursor.setText("Thanks for Visiting")
         })
@@ -113,11 +111,10 @@ function isMobileDevice() {
     global.cancelAnimationFrame = cancelAnimationFrame
 })(window)
 
-// ParticleEffects namespace and related functionality
+// ParticleEffects namespace
 ;(function (global) {
     "use strict"
 
-    // Define the ParticleEffects namespace and utility functions
     const ParticleEffects = (global.ParticleEffects = {})
 
     ParticleEffects.isTouch = "ontouchstart" in document.documentElement
@@ -184,7 +181,6 @@ function isMobileDevice() {
         return charSpans
     }
 
-    // Sparkle effect for hovered elements using ES6 Classes
     let currentElement
 
     class SparkleEffect {
